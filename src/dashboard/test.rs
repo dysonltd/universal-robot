@@ -2,7 +2,7 @@ use crate::dashboard::types::OpMode;
 use crate::prelude::*;
 use std::net::Ipv4Addr;
 
-const TEST_PROGRAM: &'static str = "rtde_control_loop.urp";
+const TEST_PROGRAM: &str = "rtde_control_loop.urp";
 
 fn init_dash() -> Result<Dashboard> {
     let dashboard = Dashboard::new(
