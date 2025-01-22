@@ -1,5 +1,4 @@
 {
-  // force format on save to be enabled for this project
   "[rust]": {
     "editor.formatOnSave": true
   },
