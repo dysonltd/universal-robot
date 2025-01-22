@@ -1,7 +1,14 @@
 {
   // force format on save to be enabled for this project
   "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

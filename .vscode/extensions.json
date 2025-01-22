@@ -1,7 +1,16 @@
 {
-  "recommendations": 
-  [
-    "tauri-apps.tauri-vscode", 
-    "rust-lang.rust-analyzer", 
+  "recommendations": [
+    "tauri-apps.tauri-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "esbenp.prettier-vscode",
+    "darkriszty.markdown-table-prettify",
+    "tamasfe.even-better-toml",
+    "hediet.vscode-drawio",
+    "github.vscode-github-actions",
+    "jebbs.plantuml",
+    "qhoekman.language-plantuml",
+    "dustypomerleau.rust-syntax",
+    "rust-lang.rust-analyzer"
   ]
 }
