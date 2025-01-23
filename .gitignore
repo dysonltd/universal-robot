@@ -6,3 +6,4 @@
 # OS Specific files
 .DS_Store
 # MegaLinter reports
+megalinter-reports/
