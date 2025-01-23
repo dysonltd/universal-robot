@@ -1,6 +1,6 @@
 # Universal Robots Ethernet Communication Protocol
 
-[![MegaLinter](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml/badge.svg)](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml)
+[![MegaLinter](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml/badge.svg)](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml) [![Continuous Build](https://github.com/dysonltd/universal-robot/actions/workflows/continuous_build.yaml/badge.svg)](https://github.com/dysonltd/universal-robot/actions/workflows/continuous_build.yaml) [![Continuous Testing](https://github.com/dysonltd/universal-robot/actions/workflows/continuous_testing.yaml/badge.svg)](https://github.com/dysonltd/universal-robot/actions/workflows/continuous_testing.yaml)
 
 [Universal Robots Website](https://www.universal-robots.com/ "Universal Robots")
 
