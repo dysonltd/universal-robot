@@ -44,7 +44,7 @@ Thank you for considering contributing to the Universal Robot project! We welcom
 
 ## Reporting Issues
 
-If you find a bug or have a feature request, please create an issue on the [Issues](https://github.com/dysonltd/Universal Robot/issues) page.
+If you find a bug or have a feature request, please create an issue on the [Issues](https://github.com/dysonltd/Universal-Robot/issues) page.
 
 ## Code of Conduct
 
