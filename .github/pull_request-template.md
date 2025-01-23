@@ -15,8 +15,6 @@ Please Tick the options that are relevant.
 
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration.
 
-### Hardware In the Loop Tests
-
 ### Your Specific Test Case
 
 ## Checklist

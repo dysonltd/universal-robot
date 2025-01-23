@@ -25,12 +25,11 @@ If applicable, add screenshots to help explain your problem.
 
 **Hardware (please complete the following information):**
 
-- Device: [e.g. ESP32, STM32, Raspberry Pi]
-- OS: [e.g. Linux, MacOS] (if applicable)
-- OS Version: [e.g. Ubuntu 24.04.1, Sequioa 15.0.1]
-- Rust Version: [e.g. 1.83.0]
-- TMAG5273 Crate Version: [e.g. 0.1.0]
-- Other Crate Versions: [e.g. ESP-HAL]
+- OS: \[e.g. Linux, MacOS] (if applicable)
+- OS Version: \[e.g. Ubuntu 24.04.1, Sequioa 15.0.1]
+- Rust Version: \[e.g. 1.83.0]
+- Universal Robot Crate Version: \[e.g. 0.1.0]
+- Other Crate Versions: \[e.g. tui]
 
 **Additional context**
 Add any other context about the problem here.
