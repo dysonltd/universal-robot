@@ -1,5 +1,7 @@
 # Universal Robots Ethernet Communication Protocol
 
+[![MegaLinter](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml/badge.svg)](https://github.com/dysonltd/universal-robot/actions/workflows/mega-linter.yaml)
+
 [Universal Robots Website](https://www.universal-robots.com/ "Universal Robots")
 
 [Universal Robots RTDE How To Guide](https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/)
