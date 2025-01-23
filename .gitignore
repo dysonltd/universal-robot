@@ -3,9 +3,7 @@
 
 # Editor-specific files
 .idea/
-.DS_Store
-.github/test_bench/.env
-# Mac OS
-.DS_Store
 
-megalinter-reports/
+# OS Specific files
+.DS_Store
+# MegaLinter reports
