@@ -22,4 +22,3 @@ jobs:
           docker compose up -d
           cargo test --all-features
           docker compose down
-
