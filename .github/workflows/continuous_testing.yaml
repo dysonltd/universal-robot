@@ -20,5 +20,7 @@ jobs:
         run: |
           cd examples/simulator
           docker compose up -d
+          echo "sleeping for 30 seconds to allow the simulator to start"
+          sleep 30
           cargo test --all-features
           docker compose down
