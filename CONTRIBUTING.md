@@ -1,6 +1,6 @@
-# Contributing to tmag5273
+# Contributing to Universal Robot
 
-Thank you for considering contributing to the tmag5273 project! We welcome contributions from everyone. Below are some guidelines to help you get started.
+Thank you for considering contributing to the Universal Robot project! We welcome contributions from everyone. Below are some guidelines to help you get started.
 
 ## How to Contribute
 
@@ -9,7 +9,7 @@ Thank you for considering contributing to the tmag5273 project! We welcome contr
 2. **Clone your fork**:
     <!-- markdown-link-check-disable -->
     ```sh
-    git clone https://github.com/your-username/tmag5273.git
+    git clone https://github.com/your-username/universal-robot.git
     ```
     <!-- markdown-link-check-enable -->
 
@@ -44,7 +44,7 @@ Thank you for considering contributing to the tmag5273 project! We welcome contr
 
 ## Reporting Issues
 
-If you find a bug or have a feature request, please create an issue on the [Issues](https://github.com/dysonltd/tmag5273/issues) page.
+If you find a bug or have a feature request, please create an issue on the [Issues](https://github.com/dysonltd/Universal Robot/issues) page.
 
 ## Code of Conduct
 
