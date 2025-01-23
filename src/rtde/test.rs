@@ -20,8 +20,7 @@ fn test_connect_rtde() {
 #[test]
 fn test_set_protocol() {
     let mut rtde = init_rtde().unwrap();
-    let resp = rtde.set_protocol_version(Protocol::V2).unwrap();
-    println!("{resp:?}");
+    rtde.set_protocol_version(Protocol::V2).unwrap();
     assert!(rtde.close().is_ok());
 }
 #[test]
@@ -63,7 +62,6 @@ fn test_start_stop() {
     assert!(rtde.start().is_ok());
     sleep(Duration::from_secs(2));
     // assert!(rtde.pause().is_ok());
-    let resp = rtde.pause().unwrap();
-    println!("{resp:?}");
+    rtde.pause().unwrap();
     assert!(rtde.close().is_ok());
 }
