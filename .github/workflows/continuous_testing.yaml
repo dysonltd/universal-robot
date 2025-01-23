@@ -21,10 +21,10 @@ jobs:
       - name: Docker compose up
         run: |
             cd examples/simulator
-            docker-compose up -d
+            docker compose up -d
       - name: Test
         run: cargo test --all-features
       - name: Docker compose down
         run: |
             cd examples/simulator
-            docker-compose down
+            docker compose down
