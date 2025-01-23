@@ -3,7 +3,6 @@
 
 # Editor-specific files
 .idea/
-
 # OS Specific files
 .DS_Store
 # MegaLinter reports
