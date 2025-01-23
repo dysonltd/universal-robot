@@ -24,7 +24,8 @@ updates:
       include: scope
 
   - package-ecosystem: "docker"
-    directory: "/"
+    directories:
+      - "**/*"
     schedule:
       interval: "weekly"
     commit-message:
