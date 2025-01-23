@@ -18,31 +18,27 @@ fn test_get_ur_version() {
 #[test]
 fn test_send_info() {
     let mut ur = UniversalRobot::connect(ADDRESS, TIMEOUT).unwrap();
-    let resp = ur.info("Hello World", "Rust").unwrap();
-    println!("{:?}", resp);
+    ur.info("Hello World", "Rust").unwrap();
     ur.close().unwrap();
 }
 
 #[test]
 fn test_send_error() {
     let mut ur = UniversalRobot::connect(ADDRESS, TIMEOUT).unwrap();
-    let resp = ur.error("Hello World", "Rust").unwrap();
-    println!("{:?}", resp);
+    ur.error("Hello World", "Rust").unwrap();
     ur.close().unwrap();
 }
 
 #[test]
 fn test_send_warn() {
     let mut ur = UniversalRobot::connect(ADDRESS, TIMEOUT).unwrap();
-    let resp = ur.warn("Hello World", "Rust").unwrap();
-    println!("{:?}", resp);
+    ur.warn("Hello World", "Rust").unwrap();
     ur.close().unwrap();
 }
 
 #[test]
 fn test_send_exception() {
     let mut ur = UniversalRobot::connect(ADDRESS, TIMEOUT).unwrap();
-    let resp = ur.exception("Hello World", "Rust").unwrap();
-    println!("{:?}", resp);
+    ur.exception("Hello World", "Rust").unwrap();
     ur.close().unwrap();
 }

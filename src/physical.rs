@@ -90,8 +90,8 @@ mod tests {
     use crate::prelude::*;
     use std::net::Ipv4Addr;
 
-    const TEST_PROGRAM: &'static str = "rtde_control_loop.urp";
-    const TEST_PROGRAM_2: &'static str = "rtde_control_loop_copy.urp";
+    const TEST_PROGRAM: &str = "rtde_control_loop.urp";
+    const TEST_PROGRAM_2: &str = "rtde_control_loop_copy.urp";
     const TIMEOUT: Duration = Duration::from_secs(10);
 
     fn init_ur() -> Result<UniversalRobot> {

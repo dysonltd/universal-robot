@@ -1,2 +1,9 @@
 /target
 /Cargo.lock
+
+# Editor-specific files
+.idea/
+# OS Specific files
+.DS_Store
+# MegaLinter reports
+megalinter-reports/
