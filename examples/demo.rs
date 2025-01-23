@@ -40,7 +40,7 @@ const OUTPUTS: &[&str] = &[
     "output_int_register_0", // is_ready
 ];
 
-const ADDRESS: IpAddr = IpAddr::V4(Ipv4Addr::LOCALHOST);
+const ADDRESS: IpAddr = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
 const TIMEOUT: Duration = Duration::from_secs(10);
 const DATA_RATE_HZ: f64 = 50.0;
 

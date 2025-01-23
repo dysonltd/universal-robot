@@ -5,7 +5,7 @@ use std::{
 };
 
 const TIMEOUT: Duration = Duration::from_secs(10);
-const ADDRESS: IpAddr = IpAddr::V4(Ipv4Addr::LOCALHOST);
+const ADDRESS: IpAddr = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
 
 #[test]
 fn test_get_ur_version() {
