@@ -16,7 +16,6 @@ pub mod commands;
 pub mod data;
 pub mod types;
 
-use bincode::Options;
 use serde::de::DeserializeOwned;
 use serde::Serialize;
 use types::Header;
@@ -44,11 +43,10 @@ pub struct Rtde {
 ///
 /// Doesn't work with strings.
 pub fn as_bytes<T: Serialize>(payload: T) -> Result<Vec<u8>> {
-    match bincode::options()
+    let config = bincode::config::legacy()
         .with_big_endian()
-        .with_fixint_encoding()
-        .serialize(&payload)
-    {
+        .with_fixed_int_encoding();
+    match bincode::serde::encode_to_vec(payload, config) {
         Err(error) => Err(Error::Serialization(error.to_string())),
         Ok(bytes) => Ok(bytes),
     }
@@ -71,13 +69,12 @@ impl Rtde {
     }
     /// Convert from a bytestream to any type T required
     fn parse_bytes<T: DeserializeOwned>(&self, buf: &[u8]) -> Result<T> {
-        match bincode::options()
+        let config = bincode::config::standard()
             .with_big_endian()
-            .with_fixint_encoding()
-            .deserialize(buf)
-        {
+            .with_fixed_int_encoding();
+        match bincode::serde::decode_from_slice(buf, config) {
             Err(error) => Err(Error::Deserialization(error.to_string())),
-            Ok(payload) => Ok(payload),
+            Ok((payload, _)) => Ok(payload),
         }
     }
     /// Read back bytes from the RTDE stream
