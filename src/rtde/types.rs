@@ -110,13 +110,16 @@ where
         if let Some(size) = set_size {
             payload.header.package_size = size;
             Ok(payload)
+        } else {
+            Ok(payload)
+        }
         // } else if let Ok(size) = bincode::serialized_size(&payload) {
         //     // TODO: Currently Not imleted in Bincode 2 ^
         //     payload.header.package_size = size as u16;
         //     Ok(payload)
-        } else {
-            Err(Error::Static("issue setting payload size"))
-        }
+        // } else {
+        //     Err(Error::Static("issue setting payload size"))
+        // }
     }
     /// What type of Payload package do we have?
     pub fn get_type(&self) -> PackageType {
