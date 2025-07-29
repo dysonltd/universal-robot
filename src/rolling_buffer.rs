@@ -125,7 +125,7 @@ mod tests {
             buff.add(num);
         }
         let data: Vec<(usize, _)> = buff.values_iter().cloned().enumerate().collect();
-        println!("{:?}", data);
+        println!("{data:?}");
         assert_eq!(5, 0) // designed to fail
     }
     #[test]

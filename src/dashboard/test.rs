@@ -17,21 +17,21 @@ fn init_dash() -> Result<Dashboard> {
 fn test_get_mode() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.get_mode().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
 fn test_is_running() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.is_running().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
 fn test_is_saved() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.is_saved().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
@@ -44,7 +44,7 @@ fn test_is_remote_mode() {
 fn test_get_loaded_program() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.get_loaded_program().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
@@ -59,7 +59,7 @@ fn test_get_version() {
 fn test_get_op_mode() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.get_op_mode().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
@@ -95,7 +95,7 @@ fn test_load_program() {
 fn test_release_brakes() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.brake_release().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
@@ -111,7 +111,7 @@ fn test_load_installation() {
     let mut dashboard = init_dash().unwrap();
     // assert!(dashboard.load_installation(None).is_ok());
     let resp = dashboard.load_installation(None).unwrap();
-    println!("{}", resp);
+    println!("{resp}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
@@ -136,14 +136,14 @@ fn test_get_program_state() {
     let mut dashboard = init_dash().unwrap();
     assert!(dashboard.load_program(TEST_PROGRAM).is_ok());
     let resp = dashboard.get_program_state().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]
 fn test_get_safety_status() {
     let mut dashboard = init_dash().unwrap();
     let resp = dashboard.safety_status().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     assert!(dashboard.close().is_ok());
 }
 #[test]

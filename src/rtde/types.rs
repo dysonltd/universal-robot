@@ -35,8 +35,7 @@ impl TryFrom<u8> for PackageType {
             83 => Ok(PackageType::Start),
             80 => Ok(PackageType::Pause),
             num => Err(Error::UnexpectedResponse(format!(
-                "Unknown Package Type: {}",
-                num
+                "Unknown Package Type: {num}"
             ))),
         }
     }

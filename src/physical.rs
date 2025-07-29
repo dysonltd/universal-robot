@@ -71,7 +71,7 @@ impl UrPort {
     }
     /// Simple TCP Write of command to the port, all writes also read response
     pub fn write(&mut self, command: &str) -> Result<String> {
-        let payload = format!("{}\n", command);
+        let payload = format!("{command}\n");
         self.writer.write_all(payload.as_bytes())?;
         self.writer.flush()?;
         self.read()

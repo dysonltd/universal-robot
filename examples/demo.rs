@@ -107,7 +107,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             move_completed = true;
             ur.rtde.write(0i32, input_recipe_1.id())?;
         }
-        println!("{:.3?}", state);
+        println!("{state:.3?}");
     }
 
     sleep(Duration::from_secs(2)); // slow down program so state changes can be seen in the simulator

@@ -49,7 +49,7 @@ impl Rtde {
     /// Send an exception, error, warning or info message.
     pub(crate) fn send_message(&mut self, message: &str, source: &str, level: Level) -> Result<()> {
         let message = Message::new(message, source, level);
-        println!("{:?}", message);
+        println!("{message:?}");
         let mut message_bytes = message.as_bytes()?;
         let header = Header::new(PackageType::Message, Some(3 + message_bytes.len() as u16));
         let mut bytes = as_bytes(header)?;
@@ -129,8 +129,7 @@ impl Rtde {
                 }
             }
             other => Err(Error::UnexpectedResponse(format!(
-                "instead of setup outputs, found {:?}",
-                other,
+                "instead of setup outputs, found {other:?}",
             ))),
         }
     }
@@ -158,8 +157,7 @@ impl Rtde {
                 let id: u8 = self.parse_bytes(&response.payload[..1])?;
                 if id == 0 {
                     return Err(Error::UnexpectedResponse(format!(
-                        "input recipe {:?} rejected",
-                        recipe
+                        "input recipe {recipe:?} rejected"
                     )));
                 }
                 match std::str::from_utf8(&response.payload[1..]) {
@@ -171,8 +169,7 @@ impl Rtde {
                 }
             }
             other => Err(Error::UnexpectedResponse(format!(
-                "instead of setup inputs, found {:?}",
-                other,
+                "instead of setup inputs, found {other:?}",
             ))),
         }
     }
