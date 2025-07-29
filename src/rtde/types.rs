@@ -1,4 +1,3 @@
-use bincode::Options;
 use serde::de::DeserializeOwned;
 use serde::{Deserialize, Serialize};
 use serde_repr::*;
@@ -111,6 +110,7 @@ where
             payload.header.package_size = size;
             Ok(payload)
         } else if let Ok(size) = bincode::serialized_size(&payload) {
+            // TODO: Currently Not imleted in Bincode 2 ^
             payload.header.package_size = size as u16;
             Ok(payload)
         } else {
@@ -162,7 +162,10 @@ impl Message {
         }
     }
     pub fn as_bytes(&self) -> Result<Vec<u8>> {
-        match bincode::options().with_big_endian().serialize(self) {
+        let config = bincode::config::standard()
+            .with_big_endian()
+            .with_fixed_int_encoding();
+        match bincode::serde::encode_to_vec(self, config) {
             Err(error) => Err(Error::Serialization(error.to_string())),
             Ok(bytes) => Ok(bytes),
         }
