@@ -8,9 +8,9 @@ impl Dashboard {
     /// - supported from 5.0.0
     pub fn load_program(&mut self, program: &str) -> Result<String> {
         let payload = if program.ends_with(".urp") {
-            format!("Load {}", program)
+            format!("Load {program}")
         } else {
-            format!("Load {}.urp", program)
+            format!("Load {program}.urp")
         };
         self.send(&payload, "loading program")
     }
@@ -22,9 +22,9 @@ impl Dashboard {
         match installation {
             Some(installation) => {
                 if installation.ends_with(".installation") {
-                    payload = format!("load installation {}", installation);
+                    payload = format!("load installation {installation}");
                 } else {
-                    payload = format!("load installation {}.installation", installation);
+                    payload = format!("load installation {installation}.installation");
                 }
             }
             None => payload = "load installation default.installation".to_owned(),
@@ -65,7 +65,7 @@ impl Dashboard {
     /// Open a popup on the robot tablet with the message
     /// - supported from 5.0.0
     pub fn popup_open(&mut self, message: &str) -> Result<String> {
-        let payload = format!("popup {}", message);
+        let payload = format!("popup {message}");
         self.send(&payload, "showing popup")
     }
     /// Closes an open popup
@@ -76,7 +76,7 @@ impl Dashboard {
     /// Adds message to log history
     /// - supported from 5.0.0
     pub fn log(&mut self, message: &str) -> Result<String> {
-        let payload = format!("addToLog {}", message);
+        let payload = format!("addToLog {message}");
         self.send(&payload, "added log message")
     }
     /// Set the operational mode of the robot
@@ -93,8 +93,8 @@ impl Dashboard {
                     OpMode::Manual => "manual",
                     OpMode::Automatic => "automatic",
                 };
-                let payload = format!("set operational mode {}", mode_str);
-                let response_pattern = format!("operational mode '{}' is set", mode_str);
+                let payload = format!("set operational mode {mode_str}");
+                let response_pattern = format!("operational mode '{mode_str}' is set");
                 self.send(&payload, &response_pattern)
             }
             None => self.send(

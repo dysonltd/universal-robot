@@ -24,8 +24,7 @@ impl Dashboard {
                 Ok(SafetyStatus::SystemThreePositionEnablingStop)
             }
             val => Err(Error::UnexpectedResponse(format!(
-                "Unknown Safety Status: {}",
-                val
+                "Unknown Safety Status: {val}"
             ))),
         }
     }

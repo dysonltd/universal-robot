@@ -11,7 +11,7 @@ const ADDRESS: IpAddr = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
 fn test_get_ur_version() {
     let mut ur = UniversalRobot::connect(ADDRESS, TIMEOUT).unwrap();
     let resp = ur.get_ur_version().unwrap();
-    println!("{:?}", resp);
+    println!("{resp:?}");
     ur.close().unwrap();
 }
 

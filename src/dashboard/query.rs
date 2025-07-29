@@ -27,8 +27,7 @@ impl Dashboard {
                 "backdrive" => Ok(RobotMode::Backdrive),
                 "running" => Ok(RobotMode::Running),
                 val => Err(Error::UnexpectedResponse(format!(
-                    "Unknown Robot Mode: {}",
-                    val
+                    "Unknown Robot Mode: {val}"
                 ))),
             }
         } else {

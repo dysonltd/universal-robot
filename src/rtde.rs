@@ -151,7 +151,7 @@ impl Rtde {
                     self.messages.add(message);
                 }
                 other => {
-                    log::trace!("Received unwanted package type: {:?}", other);
+                    log::trace!("Received unwanted package type: {other:?}");
                 }
             }
         }
