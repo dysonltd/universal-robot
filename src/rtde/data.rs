@@ -1,6 +1,5 @@
 use std::fmt::Debug;
 
-use bincode::Options;
 use serde::{de::DeserializeOwned, Deserialize, Serialize};
 use serde_repr::{Deserialize_repr, Serialize_repr};
 
@@ -107,15 +106,17 @@ impl DataType {
 
 impl Payload<Vec<u8>> {
     pub fn parse<T: DeserializeOwned>(&self) -> Result<T> {
-        match bincode::options()
+        let data = if self.is_data() {
+            &self.payload[1..] // remove recipe ID from the payload before decode
+        } else {
+            &self.payload
+        };
+        let config = bincode::config::standard()
             .with_big_endian()
-            .with_fixint_encoding()
-            .deserialize(if self.is_data() {
-                &self.payload[1..] // remove recipe ID from the payload before decode
-            } else {
-                &self.payload
-            }) {
-            Ok(data) => Ok(data),
+            .with_fixed_int_encoding();
+
+        match bincode::serde::decode_from_slice(data, config) {
+            Ok((data, _)) => Ok(data),
             Err(error) => Err(Error::Deserialization(error.to_string())),
         }
     }
