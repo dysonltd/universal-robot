@@ -143,7 +143,7 @@ impl Rtde {
 
             match response.get_type() {
                 package_type if package_type == expect => {
-                    log::debug!("recieved expected package after {responses_read} reads");
+                    log::debug!("received expected package after {responses_read} reads");
                     return self.parse_bytes(&response.payload);
                 }
                 PackageType::Message => {

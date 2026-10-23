@@ -73,7 +73,7 @@ where
         }
         values
     }
-    /// Return all of the vald values in the buffer, in the order they were added, as an Iterator.
+    /// Return all of the valid values in the buffer, in the order they were added, as an Iterator.
     ///
     /// Simple example:
     /// ```ignore

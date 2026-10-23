@@ -36,7 +36,7 @@ impl Dashboard {
     }
     /// Closes the current popup and unlocks protective stop.
     ///
-    /// Fails if less than 5 seconds has passed since the protective stop occured.
+    /// Fails if less than 5 seconds has passed since the protective stop occurred.
     /// - Remote control only
     /// - supported from 5.0.0
     pub fn safety_unlock_protective_stop(&mut self) -> Result<String> {

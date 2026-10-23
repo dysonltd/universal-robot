@@ -59,7 +59,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     sleep(Duration::from_secs(2)); // slow down program so state changes can be seen in the simulator
     ur.dashboard.popup_close()?;
 
-    // Set up RTDE Recipies for communicating real-time data with the Robot
+    // Set up RTDE Recipes for communicating real-time data with the Robot
     let output_recipe = ur.rtde.setup_output(OUTPUTS, DATA_RATE_HZ)?;
     println!("output types: {:?}", output_recipe.get_types());
     println!("-----");
